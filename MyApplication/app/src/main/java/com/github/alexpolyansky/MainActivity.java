@@ -18,20 +18,4 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-    public void clickSearch(View v) {
-
-    }
-
-    public void onGetText(View v) {
-        startActivityForResult(new Intent(this, ReturnActivity.class), -1);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RESULT_OK && resultCode == -1) {
-            data.getStringExtra("");
-
-        }
-    }
 }

@@ -2,53 +2,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
-    android:background="@drawable/background">
-
-    <EditText
+    tools:context=".MainActivity">
+    <TextView
+       android:background="#666"
+       android:id="@+id/text"
+       android:layout_width="wrap_content"
+       android:layout_height="?attr/actionBarSize"
+       android:gravity="center_vertical"
+       android:drawablePadding="16dip"
+       android:padding="16dip"
+       android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+       android:text="Hello Activity"/>
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true" />
-
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/text"
+        android:layout_toLeftOf="@id/image"
+        android:layout_toRightOf="@id/text"
+        android:background="#666"
+        android:id="@+id/view"/>
+    <ImageView
+        android:id="@+id/image"
+        android:background="#666"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:paddingLeft="16dip"
+        android:layout_width="48dip"
+        android:paddingRight="16dip"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/text"
+        android:layout_alignParentRight="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Поиск"
+        android:text="Start sample activity"
+        android:onClick="onStartSampleClick"
         android:id="@+id/button"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/text"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="clickSearch"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item1"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:onClick="onGetText"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item2"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Item3"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button3"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

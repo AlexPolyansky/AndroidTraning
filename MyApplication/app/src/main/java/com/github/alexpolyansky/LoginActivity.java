@@ -21,7 +21,7 @@ public class LoginActivity extends Activity implements TextView.OnEditorActionLi
         editGo.setOnEditorActionListener(this);
     }
     public void onStart(View v){
-        startActivity(new Intent(this, MainActivityTwo.class));
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     @Override
