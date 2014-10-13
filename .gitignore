@@ -25,3 +25,6 @@ proguard/
 # Log Files
 *.log
 MyApplication/.idea/
+
+# Java class files
+*.iml
