@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:padding="10dip"
+    android:background="@drawable/background">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:src="@drawable/logotype"
+            android:layout_alignParentTop="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentBottom="false"/>
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:layout_below="@id/logo"
+            android:id="@+id/login_edt"
+            android:editable="false"
+            android:hint="@string/edt_login"
+            android:layout_gravity="center_vertical" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_below="@id/login_edt"
+            android:ems="10"
+            android:id="@+id/password_edt"
+            android:hint="@string/edt_password"
+            android:layout_gravity="center"
+            android:imeOptions="actionGo"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel"
+            android:layout_below="@+id/password_edt"
+            android:layout_alignRight="@id/password_edt"
+            android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+            android:drawablePadding="2dip"
+            android:id="@+id/cancel_btn"
+            android:onClick="onStart"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_login"
+            android:id="@+id/login_btn"
+            android:onClick="onStart"
+            android:drawableLeft="@android:drawable/ic_menu_add"
+            android:drawablePadding="2dip"
+            android:layout_below="@+id/password_edt"
+            android:layout_toLeftOf="@+id/cancel_btn"
+            android:layout_toStartOf="@+id/cancel_btn" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_singup"
+            android:id="@+id/login_singup"
+            android:onClick="onStart"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:drawablePadding="2dip"
+            android:layout_below="@+id/password_edt"
+            android:layout_toLeftOf="@+id/login_btn"
+            android:layout_toStartOf="@+id/login_btn" />
+
+
+</RelativeLayout>
